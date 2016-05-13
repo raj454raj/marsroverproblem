@@ -27,7 +27,7 @@ class Rover
                                                              @orientation,
                                                              direction)
 
-      if @mars.is_not_valid?(*@coordinates)
+      if @mars.not_valid?(*@coordinates)
         puts 'Not a valid move. Out of Mars :\'('
         exit
       end

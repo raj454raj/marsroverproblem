@@ -27,29 +27,29 @@ describe Mars do
     end
   end
 
-  describe 'Mars#is_not_valid?' do
+  describe 'Mars#not_valid?' do
     before do
       @mars = Mars.new(5, 5)
     end
 
     it 'can handle a valid coordinate' do
-      expect(@mars.is_not_valid?(2, 3)).to eq(false)
-      expect(@mars.is_not_valid?(0, 5)).to eq(false)
+      expect(@mars.not_valid?(2, 3)).to eq(false)
+      expect(@mars.not_valid?(0, 5)).to eq(false)
     end
 
     it 'can handle an under boundary condition' do
-      expect(@mars.is_not_valid?(-1, 2)).to eq(true)
-      expect(@mars.is_not_valid?(4, -3)).to eq(true)
+      expect(@mars.not_valid?(-1, 2)).to eq(true)
+      expect(@mars.not_valid?(4, -3)).to eq(true)
     end
 
     it 'can handle an over boundary condition' do
-      expect(@mars.is_not_valid?(4, 6)).to eq(true)
-      expect(@mars.is_not_valid?(8, 1)).to eq(true)
+      expect(@mars.not_valid?(4, 6)).to eq(true)
+      expect(@mars.not_valid?(8, 1)).to eq(true)
     end
 
     it 'can handle both under and over boundary conditions' do
-      expect(@mars.is_not_valid?(7, -1)).to eq(true)
-      expect(@mars.is_not_valid?(-5, 9)).to eq(true)
+      expect(@mars.not_valid?(7, -1)).to eq(true)
+      expect(@mars.not_valid?(-5, 9)).to eq(true)
     end
   end
 
@@ -74,5 +74,4 @@ describe Mars do
       expect(@mars.obtain_new_position([1, 1], 'E', 'R')).to eq([[1, 1], 'S'])
     end
   end
-
 end

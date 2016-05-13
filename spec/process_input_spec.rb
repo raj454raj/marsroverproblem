@@ -77,7 +77,7 @@ describe ProcessInput do
       expect(@process_input.obtain_path_pattern(1)).to eq('MMRMMRMRRM')
     end
 
-    it  'can raise an error for an invalid path pattern' do
+    it 'can raise an error for an invalid path pattern' do
       process_input = ProcessInput.new("5 5\n1 2 R\nLMLMMLWW\n")
       expect { process_input.obtain_path_pattern(0) }.to raise_error(RuntimeError)
     end
