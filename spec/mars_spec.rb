@@ -62,8 +62,8 @@ describe Mars do
       expect(@mars.obtain_new_position([1, 1], 'E', 'M')).to eq([[2, 1], 'E'])
     end
 
-    it 'can exit from the program for an invalid position in M' do
-#      expect { @mars.obtain_new_position([1, 1], 'E', 'M') }.to raise_error(SystemExit)
+    it 'can raise an error for an invalid position in M' do
+      expect { @mars.obtain_new_position([1, 1], 'E', 'E') }.to raise_error(RuntimeError)
     end
 
     it 'can obtain a new state with R' do

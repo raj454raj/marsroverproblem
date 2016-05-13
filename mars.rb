@@ -39,8 +39,7 @@ class Mars
     elsif direction == 'R'
       return [old_coordinates, @left_right_conversion[old_orientation][1]]
     else
-      puts 'Invalid direction in the input'
-      exit
+      raise('Invalid direction in the input')
     end
   end
 end

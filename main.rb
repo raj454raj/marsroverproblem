@@ -12,7 +12,7 @@ if __FILE__ == $PROGRAM_NAME
   process_input.test_cases.times do |i|
     current_state = process_input.obtain_current_state(i)
     path_pattern = process_input.obtain_path_pattern(i)
-    rover = Rover.new([current_state[0], current_state[1],
+    rover = Rover.new([current_state[0], current_state[1]],
                       current_state[2],
                       path_pattern,
                       mars)
